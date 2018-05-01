@@ -98,7 +98,7 @@ $(document).ready(()=>{
     220:'back slash',  
     221:'close braket',    
     222:'single quote'};
-    document.onkeydown = function(e) {
+    document.onkeydown = function(event) {
         let code = event.which || event.keyCode;
         let codeNumber = Number(code);
         let codeName = keyCodes[codeNumber];
