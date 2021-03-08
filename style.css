@@ -1,160 +1,260 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,700|Roboto+Slab:700');
-html {
-    position: relative;
-    min-height: 100%;
+
+
+* {
+    font-size: 10px;
+    scroll-behavior: smooth;
 }
+
 body {
-    background:#272a33;
+    margin:0;
+    padding:0;
+    background-color: #272a33;
     color: #ccc;
+}
+
+h1 {
+    display: block;
+    font-family: 'Roboto Slab', serif;
+    font-size: 4rem;
+    margin: 0;
+}
+
+p,em,i {
     font-family: 'Poppins', sans-serif;
-    margin-bottom: 100px;
-}
-.navbar {
-    color: #ccc;
-    z-index: 2;
+    font-size: 1.8rem;
 }
 
-.aboutMe {
-    margin: 8% auto;
-}
-.projects {
-    margin: -5% auto;
-}
-.siema {
-    position: relative;
-    z-index: 1;
- }
-.next {
-    position: absolute;
-    right: 5%;
-    top: 50%;
-    font-size: 3rem;
-    background-color: Transparent;
-    border:none;
-    z-index: 2;
-    color: #ccc;
-
+nav {
+    position: fixed;
+    height: 92px;
+    width: 100%;
+    top: 0;
+    margin:0;
+    padding:0;
+    text-align: center;
+    background-color: #272a33;
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
 
 }
-.prev {
-    position: absolute;
-    left: 5%;
-    top: 50%;
-    font-size: 3rem;
-    background-color: Transparent;
-    border:none;
-    z-index: 2;
+
+nav a {
     color: #ccc;
+    font-size: 2.4rem;
+    font-family: 'Roboto Slab', serif;
+    text-decoration: none;
+    line-height: 92px;
+    margin: 0px 20px;
 }
 
-.next:focus,.prev:focus {
-    outline: none;
+nav a:hover {
+    border-bottom: 3px solid #ccc;
 }
-.liveLink,.sourceLink {
-    color: #ccc;
-    font-weight: bold;
+
+main {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+#welcome-section {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    text-align: center;
+}
+
+
+
+#welcome-section p {
+    display: block;
+    margin: 5px;
+}
+
+#projects {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100vw;
     
 }
-.liveLink:hover,.sourceLink:hover {
+
+#projects h1 {
+    margin: 100px 0;
+}
+
+
+#projects-container {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: 400px 400px 400px;
+    grid-template-rows: 470px 470px 470px;
+    grid-row-gap: 60px;
+    grid-column-gap: 60px;
+    grid-template-areas: 
+    'tribute survey landing'
+    'documentation calculator pomodoro'
+    'simon . .'
+    ;
+
+}
+
+#projects-container div {
+    box-sizing: border-box;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5);
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+#projects-container div a {
+    box-sizing: border-box;
+    text-decoration: none;
     color: #ccc;
-    font-weight: bold;
+    
 }
 
-.text-1 {
-    margin-top:5%;
-    font-size: 1.15rem;
-}
-.text-2 {
-    font-size: 1.15rem;
-}
-.text-3 {
-    margin-top: 10%;
-    font-family: 'Roboto Slab', serif;
-}
-.title {
-    font-family: 'Roboto Slab', serif;
-}
-h3 {
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-
-}
-.fab,.fas {
-    font-size : 3rem;
-    display: inline-block;
-    vertical-align: middle;
-}
-.fa-discord {
-    margin-top:5px;
-}
-.contactLinks {
-    color:#ccc;
-}
-.contactLinks:hover {
-    transition: color 0.5s ease;
-    color:rgb(240, 240, 240);   
+#projects-container div img {
+    width: 400px;
+    height: 400px;
+    display: block;
+    box-sizing: border-box;
 }
 
+#projects-container div p {
+    display:block;
+    box-sizing: border-box;
+    padding: 15px 0;
+    margin: 0;
+}
 
-.devicon {
-    font-size: 3rem;
-    display: inline-block;
+#contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height:100vh;
+    width: 100vw;
+    box-sizing: border-box;
+}
+#contact-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align:center;
+    box-sizing: border-box;
+}
+
+#contact a {
+    display: block;
+    box-sizing: border-box;
+    font-size: 1.8rem;
+    font-family: 'Poppins', sans-serif;
+    color: #ccc;
+    text-decoration: none;
     margin: 20px;
 }
-.devicon-text {
-    font-size: 1rem;
-    font-family: 'Poppins', sans-serif!important;
+
+
+#contact a:hover {
+    border-bottom: 3px solid #ccc;
+    margin-top: 17px;
 }
-.devicon-html5-plain:hover {
-    color: #E54D26;
-    transition: color 0.5s ease;
+
+@media only screen and (max-width: 1319px) {
+    #projects-container {
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        grid-template-columns: 400px 400px;
+        grid-template-rows: 470px 470px 470px 470px;
+        grid-row-gap: 60px;
+        grid-column-gap: 60px;
+        grid-template-areas: 
+        'tribute survey'
+        'landing documentation'
+        'calculator pomodoro'
+        'simon .'
+        ;
+    }
 }
-.devicon-css3-plain:hover {
-    color: #3D8FC6;
-    transition: color 0.5s ease;
+
+@media only screen and (max-width: 859px) {
+    #projects-container {
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        grid-template-columns: 400px;
+        grid-template-rows: repeat(7,470px);
+        grid-row-gap: 60px;
+        grid-column-gap: 60px;
+        grid-template-areas: 
+        'tribute'
+        'survey'
+        'landing'
+        'documentation'
+        'calculator'
+        'pomodoro'
+        'simon';
+    }
+
+    
+    #contact-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        box-sizing: border-box;
+    }
+
 }
-.devicon-javascript-plain:hover {
-    color: #F0DB4F;
-    transition: color 0.5s ease;
-}
-.devicon-bootstrap-plain:hover {
-    color: #59407F;
-    transition: color 0.5s ease;
-}
-.devicon-jquery-plain:hover {
-    color:#7ACEF4;
-    transition: color 0.5s ease;
-}
-.devicon-visualstudio-plain:hover {
-    color:#007ACC;
-    transition: color 0.5s ease;
-}
-.nav-link {
-    margin: 20px;
-    color:#ccc;
-    font-size: 1.5rem;
-    font-family: 'Roboto Slab', serif;
-}
-.nav-link:hover {
-    color:#ccc;
-    -webkit-box-shadow: inset 0px -2px 0px 0px rgba(204,204,204,1);
-    -moz-box-shadow: inset 0px -2px 0px 0px rgba(204,204,204,1);
-    box-shadow: inset 0px -2px 0px 0px rgba(204,204,204,1);
-}
-.footer {
-    color:#ccc;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 40px; /* Set the fixed height of the footer here */
-    line-height: 40px; /* Vertically center the text there */
-    background-color: #272a33;
-}
-.footer2 {
-    color:#ccc;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 100px; /* Set the fixed height of the footer here */
-    line-height: 40px; /* Vertically center the text there */
-    background-color: #272a33;
+
+@media only screen and (max-width: 416px) {
+    nav {
+        height: 57.5px;
+    }    
+    nav a {
+        font-size: 1.5rem;
+        line-height: 57.5px;
+    }
+
+    #projects-container {
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        grid-template-columns: 320px;
+        grid-template-rows: repeat(7,390px);
+        grid-row-gap: 60px;
+        grid-column-gap: 60px;
+        grid-template-areas: 
+        'tribute'
+        'survey'
+        'landing'
+        'documentation'
+        'calculator'
+        'pomodoro'
+        'simon';
+    }
+
+    #projects-container div img {
+        width: 320px;
+        height: 320px;
+    }
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    p,em,i {
+        font-size: 1.6rem;
+    }
+
+    #contact a {
+        font-size: 1.6rem;
+    }
+    
+    
 }
