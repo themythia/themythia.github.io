@@ -98,7 +98,7 @@ main {
     grid-template-areas: 
     'tribute survey landing'
     'documentation calculator pomodoro'
-    'simon . .'
+    'simon etch .'
     ;
 
 }
@@ -106,8 +106,10 @@ main {
 #projects-container div {
     box-sizing: border-box;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5);
-    border-bottom-left-radius: 3px;
-    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: hsl(225, 13%, 23%);
+
 }
 
 #projects-container div a {
