@@ -7,13 +7,14 @@
 
 $background: #343d4b
 $widgetBackground: #222831
-  
+html 
+  height: 100%
 body
   background-color: $background
   color: white
   display: flex
   flex-direction: row
-  height: 100vh
+  height: 100%
   justify-content: center
   align-items: center
   font-family: 'Montserrat', sans-serif
@@ -131,12 +132,11 @@ body
           background-color: white
 
 @media screen and ( max-width: 665px)
-  body 
-    overflow: hidden
   #container
     flex-direction: column
-    height: auto
-    
+    max-height: 835px
+    #left:hover
+      transform: none
     #right
       height: 425px
       width: 300px

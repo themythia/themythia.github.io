@@ -9,6 +9,10 @@
           box-sizing: border-box;
 }
 
+html {
+  height: 100%;
+}
+
 body {
   background-color: #343d4b;
   color: white;
@@ -19,7 +23,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  height: 100vh;
+  height: 100%;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -217,15 +221,16 @@ body {
 }
 
 @media screen and (max-width: 665px) {
-  body {
-    overflow: hidden;
-  }
   #container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    height: auto;
+    max-height: 835px;
+  }
+  #container #left:hover {
+    -webkit-transform: none;
+            transform: none;
   }
   #container #right {
     height: 425px;
