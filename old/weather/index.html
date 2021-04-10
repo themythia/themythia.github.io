@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="style.css">
+  <title>weather app</title>
+</head>
+<body>
+  <div id="container">
+    <div id="left">
+      <div id="info-top">
+        <p id="day"></p>
+        <p id="date"></p>
+        <p id="location">
+          <i class="bi bi-geo-alt"></i>
+          <span></span>
+        </p>
+      </div>
+      <div id="info-bottom">
+        <i id='weather-icon' class='bi'></i>
+        <p id="temp"></p>
+        <p id="weather"></p>
+      </div>
+    </div>
+    <div id="right">
+      <div id="right-info-top">
+        <div class='right-top'>
+          <p class='bold'>HUMIDITY</p>
+          <p id="humidity"></p>
+        </div>
+        <div class="right-top">
+          <p class='bold'>WIND</p>
+          <p id="wind"></p>
+        </div>
+      </div>
+      <div id="right-days">
+        <div class='days active' id="days-1">
+          <i id='day1-icon' class='bi'></i>
+          <p id='day1-day'></p>
+          <p class='bold' id='day1-temp'></p>
+        </div>
+        <div class='days' id="days-2">
+          <i class='bi bi-cloud-drizzle'></i>
+          <p id='day2-day'></p>
+          <p class='bold'>8°C</p>
+        </div>
+        <div class='days' id="days-3">
+          <i class='bi bi-snow'></i>
+          <p id='day3-day'></p>
+          <p class='bold'>-2°C</p>
+        </div>
+        <div class='days' id="days-4">
+          <i class='bi bi-sun'></i>
+          <p id='day4-day'></p>
+          <p class='bold'>15°C</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
