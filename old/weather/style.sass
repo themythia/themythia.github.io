@@ -7,8 +7,10 @@
 
 $background: #343d4b
 $widgetBackground: #222831
+
 html 
   height: 100%
+
 body
   background-color: $background
   color: white
@@ -31,22 +33,25 @@ body
     width: 310px
     border-radius: 30px
     background: linear-gradient( 135deg, #5151E5 10%, #72EDF2 100%)
-
     z-index: 2
     display: flex
     flex-direction: column
     justify-content: space-between
-    
+    transition: transform 0.5s
+
     #info-top
       margin: 35px 0px 0px 25px
 
       #day
         font-weight: 700
         font-size: 24px
+
       p
         margin: 0     
+
       #location
         padding-top: 15px
+
         i
           font-size: 16px
 
@@ -70,7 +75,6 @@ body
     &:hover
       transform: scale(1.05) rotateX(0deg) rotateY(4deg)
       transform-style: preserve-3d
-      transition: transform 0.5s
 
 
   #right
@@ -114,29 +118,34 @@ body
         justify-content: space-around
         align-items: center
         padding:  15px
-        
+        transition: all 0.3s
+
         p
           margin: 0
 
         i
           font-size: 30px
           display: block
+
         &:hover
           color: $widgetBackground
           background-color: white
-          transform: scale(1.1)
-          transition: transform 0.3s
+          transform: scale(1.1) 
           border: 1px solid $widgetBackground
+
       .active        
           color: $widgetBackground
           background-color: white
 
 @media screen and ( max-width: 665px)
+
   #container
     flex-direction: column
     max-height: 835px
+
     #left:hover
       transform: none
+
     #right
       height: 425px
       width: 300px
@@ -147,5 +156,6 @@ body
       
       #right-info-top
         margin: 65px 25px 0px 25px
+        
       #right-days
         margin: 65px 25px 55px 25px
