@@ -17,7 +17,7 @@ const day1Temp = document.getElementById('day1-temp');
 const infoTop = document.getElementById('info-top');
 const infoBottom = document.getElementById('info-bottom');
 const rightDays = document.getElementById('right-days');
-console.log(infoTop.children);
+// console.log(infoTop.children);
 //Geolocation API
 //options are optional
 const options = {
@@ -46,7 +46,7 @@ const getData = async (coords) => {
     const config = {params: {lon: coords.lon, lat: coords.lat}};
     const url = 'https://weather-proxy.freecodecamp.rocks/api/current';
     const response = await axios.get(url,config);
-    console.log(response);
+    // console.log(response);
     apiData(response);
   }
   catch (error) {
@@ -77,8 +77,8 @@ const apiData = (response) => {
       day: date.getDate()
     }
   }
-  modifyDOM(data,weekdays3),
-  console.log(data);
+  modifyDOM(data,weekdays3);
+  // console.log(data);
 }
 
 const modifyDOM = (data,week3) => {
@@ -135,9 +135,9 @@ const modifyDOM = (data,week3) => {
     }
     rightDayArr.push(day);
   }
-  day2Day.innerText = week3[0];
-  day3Day.innerText = week3[1];
-  day4Day.innerText = week3[2];
+  day2Day.innerText = week3[rightDayArr[0]];
+  day3Day.innerText = week3[rightDayArr[1]];
+  day4Day.innerText = week3[rightDayArr[2]];
 
 }
 
